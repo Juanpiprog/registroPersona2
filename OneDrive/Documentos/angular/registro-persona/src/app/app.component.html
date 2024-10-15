@@ -1,0 +1,52 @@
+<h1 style="text-align: center; font-family: cursive;">
+  Restaurante El Glotón
+</h1>
+<header class="header">
+  <img src="../assets/images/logo.png.jpeg" alt="Logo El Glotón" class="logo">
+  <h1>El Glotón</h1>
+  <nav>
+    <ul class="menu">
+      
+      <li><a routerLink="/"><img src="../assets/images/cubierto.jpeg" alt="Logo El Glotón" class="logo"></a></li>
+     
+      <li><a routerLink="cliente">Clientes</a></li>
+      <li><a routerLink="usuario">Usuarios</a></li>
+      <li><a routerLink="registro">administrador</a></li>
+    </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>
+<section id="inicio" class="hero">
+  <div class="hero-content">
+    <h2>Bienvenido a El Glotón</h2>
+    <p>Donde el placer gastronómico se encuentra con la elegancia</p>
+    <a routerLink="menu" class="btn">Explora el Menú</a>
+  </div>
+</section>
+<router-outlet></router-outlet>
+<section id="menu" class="menu-section">
+  <h2>Nuestro Menú</h2>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <h3>Entradas</h3>
+      <p>Sopa de mariscos frescos</p>
+      <p>Bruschettas gourmet</p>
+    </div>
+    <div class="menu-item">
+      <h3>Platos fuertes</h3>
+      <p>Filete de res al vino tinto</p>
+      <p>Pasta fresca con mariscos</p>
+    </div>
+    <div class="menu-item">
+      <h3>Postres</h3>
+      <p>Tarta de chocolate con frutos rojos</p>
+      <p>Helado artesanal</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2024 El Glotón. Todos los derechos reservados.</p>
+</footer>
+
+

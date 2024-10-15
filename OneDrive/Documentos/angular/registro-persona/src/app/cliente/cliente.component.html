@@ -1,0 +1,43 @@
+<p>cliente works!</p>
+<h2 style="  text-align: center; color: rgb(247, 133, 4); font-family: fantasy;">Agregar Cliente</h2>
+<div style="justify-content: center;text-align: center;">
+    ¿ engorda?
+    <form (ngSubmit)="agregarCliente()">
+    
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input name="nombre" id="nombre" [(ngModel)]="nuevoCliente.nombre" placeholder="Ingrese su nombre:" required>
+      </div>
+      
+      <div>
+        <label for="ci">CI:</label>
+        <input name="ci" id="ci" [(ngModel)]="nuevoCliente.ci" placeholder="Ingrese su CI:" required>
+      </div>
+      
+      <div>
+        <label for="telefono">Teléfono:</label>
+        <input name="telefono" id="telefono" [(ngModel)]="nuevoCliente.telefono" placeholder="Ingrese su teléfono:" required>
+      </div>
+      
+      <div>
+        <label for="ciudad">Ciudad:</label>
+        <input name="ciudad" id="ciudad" [(ngModel)]="nuevoCliente.ciudad" placeholder="Ingrese su ciudad:" required>
+      </div>
+      
+      <div>
+        <label for="direccion">Dirección:</label>
+        <input name="direccion" id="direccion" [(ngModel)]="nuevoCliente.direccion" placeholder="Ingrese su dirección:" required>
+      </div>
+      
+      
+      <button class="boton" 
+        (mouseenter)="textoBoton = 'Engorda'" 
+        (mouseleave)="textoBoton = 'Agregar Cliente'" 
+        type="submit">
+  {{ textoBoton }}
+     </button>
+
+
+    </form>
+   </div>
+  

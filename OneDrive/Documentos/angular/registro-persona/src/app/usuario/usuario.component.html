@@ -1,0 +1,26 @@
+<p>usuario works!</p>
+<h2 style="  text-align: center; color: rgb(139, 175, 9); font-family: cursive;">Agregar Usuario</h2>
+<form (ngSubmit)="agregarUsuario()">
+  <input [(ngModel)]="nuevoUsuario.nombre" name="nombre" placeholder="Nombre" required>
+  <input [(ngModel)]="nuevoUsuario.ci" name="ci" placeholder="CI" required>
+  <input [(ngModel)]="nuevoUsuario.telefono" name="telefono" placeholder="Teléfono" required>
+  <input [(ngModel)]="nuevoUsuario.ciudad" name="ciudad" placeholder="Ciudad" required>
+  <input [(ngModel)]="nuevoUsuario.username" name="username" placeholder="Username" required>
+  <button type="submit">Agregar Usuario</button>
+</form>
+
+<h2 style="  text-align: center">Lista de Usuarios</h2>
+<ul>
+  <li *ngFor="let usuario of usuarios">
+    {{ usuario.toString() }}
+    <button class="mere" (click)="eliminarUsuario(usuario.ci)" >Eliminar</button>
+  </li>
+</ul>
+
+<h2>Lista de Clientes</h2>
+<ul>
+<li *ngFor="let cliente of clientes">
+    {{ cliente.toString() }}
+    <button (click)="eliminarCliente(cliente.ci)" style="color: red;">Eliminar</button>
+</li>
+</ul>

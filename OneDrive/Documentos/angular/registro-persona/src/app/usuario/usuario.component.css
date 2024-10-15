@@ -1,0 +1,15 @@
+.mere{
+    background-color: #FFC107; /* Amarillo soleado para botones */
+    color: rgb(238, 9, 9);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.mere:hover {
+    background-color: #DC3545; /* Rojo apetitoso al pasar el ratón */
+    color: white;
+    padding: 10px 20px;
+}

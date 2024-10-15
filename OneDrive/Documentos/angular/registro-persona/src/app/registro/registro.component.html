@@ -1,0 +1,41 @@
+
+<h2 style="justify-content: center; text-align: center; color: rgb(109, 102, 5); font-family: fantasy;">Agregar Cliente</h2>
+<form (ngSubmit)="agregarCliente()">
+  <input [(ngModel)]="nuevoCliente.nombre" name="nombre" placeholder="Nombre" required>
+  <input [(ngModel)]="nuevoCliente.ci" name="ci" placeholder="CI" required>
+  <input [(ngModel)]="nuevoCliente.telefono" name="telefono" placeholder="Teléfono" required>
+  <input [(ngModel)]="nuevoCliente.ciudad" name="ciudad" placeholder="Ciudad" required>
+  <input [(ngModel)]="nuevoCliente.direccion" name="direccion" placeholder="Dirección" required>
+  <button type="submit">Agregar Cliente</button>
+</form>
+
+<h2 style="justify-content: center; text-align: center; color: rgb(139, 175, 9); font-family: cursive;">Agregar Usuario</h2>
+<form (ngSubmit)="agregarUsuario()">
+  <input [(ngModel)]="nuevoUsuario.nombre" name="nombre" placeholder="Nombre" required>
+  <input [(ngModel)]="nuevoUsuario.ci" name="ci" placeholder="CI" required>
+  <input [(ngModel)]="nuevoUsuario.telefono" name="telefono" placeholder="Teléfono" required>
+  <input [(ngModel)]="nuevoUsuario.ciudad" name="ciudad" placeholder="Ciudad" required>
+  <input [(ngModel)]="nuevoUsuario.username" name="username" placeholder="Username" required>
+  <button type="submit">Agregar Usuario</button>
+</form>
+
+<div style="text-align: center; color: rgb(51, 255, 0);">
+  <button (click)="verListas() ">Ver Listas</button>
+</div>
+<div *ngIf="listasVisible">
+  <h2>Lista de Usuarios</h2>
+  <ul>
+    <li *ngFor="let usuario of usuarios">
+      {{ usuario.toString() }}
+      <button (click)="eliminarUsuario(usuario.ci)" style="color: red;">Eliminar</button>
+    </li>
+  </ul>
+
+  <h2>Lista de Clientes</h2>
+  <ul>
+    <li *ngFor="let cliente of clientes">
+      {{ cliente.toString() }}
+      <button (click)="eliminarCliente(cliente.ci)" style="color: red;">Eliminar</button>
+    </li>
+  </ul>
+</div>
